@@ -1,0 +1,52 @@
+.champ{
+    position: absolute;
+    left:15%;
+    }
+
+#calculs{
+    position: absolute;
+    left:15%; top:67%;
+    }
+
+#efface{
+    position: absolute;
+    top:67%;
+    }
+
+#total{
+    position: absolute;
+    left:8%; top:67%;
+    }
+
+body{
+    background-color: rgba(146, 141, 141, 0.795);
+}
+
+#toiture{
+    position: absolute;
+    left: 40%;
+}
+
+#modif{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+ .label{
+      margin-left: 5%;
+    }
+
+#logo{
+    text-align: center;
+}
+
+.selection{
+    text-align: center;
+    margin-top: 5%;
+    font-size: 200%;}
+
+.modification{
+    position: absolute;
+    left:10%;
+    }
