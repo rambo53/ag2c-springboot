@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <title>Total chantier</title>
+</head>
+<body>
+
+<div th:if="${surfaceTotal}!=null">
+
+    <h1><u>Total chantier : </u></h1><br/>
+
+    La surface totale à couvrir pour le chantier est de <b style="color:red" th:text="${surfaceTotal}"></b> m2.<br/>
+    Il faudra <b style="color:red" th:text="${nbArdoisesTotal}"></b> ardoises au total pour le chantier.<br/>
+    Il faudra <b style="color:red" th:text="${metreLiteauTotal}"></b> mètres de liteau au total pour le chantier.<br/>
+    <span th:if="${metreVoligeTotal}!=0">Il faudra <b style="color:red" th:text="${metreVoligeTotal}"></b> mètres de volige pour le chantier.<br/></span>
+    Il faudra prévoir <b style="color:red" th:text="${joursDeChantierTotal}"></b> jours de chantier.<br/><br/>
+
+    <h4><u>Coût chantier :</u></h4><br/>
+
+    Le chantier coûtera <b style="color:red" th:text="${coutTotalArdoises}"></b> €HT en ardoises.<br/>
+    <span th:if="${metreVoligeTotal}!=0">Le chantier coûtera <b style="color:red" th:text="${coutTotalVolige}"></b> €HT en volige.<br/></span>
+    Le chantier coûtera <b style="color:red" th:text="${coutTotalLiteau}"></b> €HT en liteau.<br/>
+    Le chantier coûtera <b style="color:red" th:text="${coutTotalCarburant}"></b> €HT en carburants.<br/>
+    Le chantier coûtera <b style="color:red" th:text="${coutTotalRepas}"></b> €HT en repas.<br/><br/>
+
+    Le chantier coûtera au total <b style="color:red" th:text="${coutTotalChantier}"></b> €HT.<br/><br/>
+
+    On facturera <b style="color:red" th:text="${coutArdoiseMarge}"></b> €HT en ardoises au client.<br/>
+    <span th:if="${metreVoligeTotal}!=0">On facturera <b style="color:red" th:text="${coutVoligeMarge}"></b> €HT en volige au client.<br/></span>
+    On facturera <b style="color:red" th:text="${coutLiteauMarge}"></b> €HT en liteau au client.<br/>
+    <span th:if="${coutNoue}!=0">On facturera <b style="color:red" th:text="${coutNoue}"></b> €HT en noue au client.<br/></span>
+    <span th:if="${coutArretier}!=0">On facturera <b style="color:red" th:text="${coutArretier}"></b> €HT en arrêtier au client.<br/></span>
+    On facturera <b style="color:red" th:text="${coutTotalHoraire}"></b> €HT en main d'oeuvre au client.<br/>
+
+</div>
+
+<h1 th:if="${surfaceTotal}==null">Veuillez d'abord enregistrer un versant.</h1>
+
+</body>
+</html>
