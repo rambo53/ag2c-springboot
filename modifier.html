@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Modifier matériaux</title>
+</head>
+<body>
+
+<h1><u>Modifier matériaux enregistrés</u></h1>
+    <form th:action="@{/modifier/{id} (id=${materiau.id})}" method="GET">
+        <label>Nom : </label> <input type="text" class="modification" name="nom" th:value="${materiau.nom}"><br>
+        <label>prix : </label> <input type="text" class="modification" name="prix" th:value="${materiau.prix}"><br>
+        <label>stock : </label> <input type="text" class="modification" name="stock" th:value="${materiau.stock}"><br><br>
+        <input type="submit" value="Modifier">
+    </form>
+</body>
+</html>
