@@ -1,0 +1,15 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+
+<h4><u>Versant : <span th:text="${nomVersant}"/></u></h4>
+La surface à couvrir est de <b style="color:red" th:text="${surface}"></b> m2.<br/>
+Le pureau est de <b style="color:red" th:text="${pureau}"></b> cm.<br/>
+Il y aura <b style="color:red" th:text="${nbLiteau}"></b> longueurs de liteaux.<br/>
+Il faudra <b style="color:red" th:text="${metreLiteau}"></b> m de liteaux pour ce versant.<br/>
+<span th:if="${longueurVolige}!=0"> Il faudra <b style="color:red" th:text="${longueurVolige}"></b> m de volige.<br/></span>
+Il y aura <b style="color:red" th:text="${nbArdoiseAuM2}"></b> ardoises par m2.<br/>
+Il faudra <b style="color:red" th:text="${nbTotalArdoise}"></b> ardoises pour ce versant.<br/>
+Il faudra <b style="color:red" th:text="${jourDeChantier}"></b> jours de chantier pour ce versant.<br/><br/>
+
+<hr>
