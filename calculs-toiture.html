@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Calculs</title>
+</head>
+<body>
+
+<h1><u>Calculs</u></h1><br>
+
+<p id="toiture"><img th:src="@{/images/toiture.jpg}"></p><br>
+
+<form th:action="@{/calculs}"  method="GET">
+    Nom/numero versant : <input type="text" class="champ" name="nomVersant"><br>
+    Distance chantier (en km) : <input type="text" class="champ" name="distance"><br><br>
+
+    Type de toiture :<br>
+    <input type="radio" name="forme" value="rectangle"> rectangle<br>
+    <input type="radio" name="forme" value="triangle"> triangle<br>
+    <input type="radio" name="forme" value="quatreVersants"> quatre versants<br><br>
+
+    <label>Longueur rampant (en mètres) : </label> <input type="text" class="champ" name="rampant"><br>
+    <label>Longueur facade (en mètres) :  </label> <input type="text" class="champ" name="facade"><br>
+    <label>Longueur faitage (en mètres) : </label> <input type="text" class="champ" name="faitage" value="0"><br><br>
+    <label>Longueur noue (en mètres) : </label> <input type="text" class="champ" name="noue" value="0"><br>
+    <label>Longueur arrêtier (en mètres) : </label> <input type="text" class="champ" name="arretier" value="0"><br><br>
+
+    <label>Nombre de velux : </label> <input type="text" class="champ" name="nbVelux" value="0"><br>
+    <label>Hauteur velux (en mètres, séparé par "/") : </label> <input type="text" class="champ" name="hauteurVelux" value="0"><br>
+    <label>Largeur velux (en mètres, séparé par "/") : </label> <input type="text" class="champ" name="largeurVelux" value="0"><br><br>
+
+
+    <label>Hauteur ardoise (en cm) :  </label> <input type="text" class="champ" name="hauteurArdoise"><br>
+    <label>Largeur ardoise (en cm) :  </label> <input type="text" class="champ" name="largeurArdoise"><br>
+    <label>Longueur crochet (en cm) : </label> <input type="text" class="champ" name="longueurCrochet"><br>
+    <label>Diametre crochet (en cm) : </label> <input type="text" class="champ" name="diametreCrochet"><br><br>
+
+    Il y aura t'il de la volige :<br>
+    <input type="radio" name="volige" value="oui"> oui<br>
+    <input type="radio" name="volige" value="non"> non<br>
+
+    <br><input type="reset" id="efface" value="Effacer champs">
+    <input type="submit" id="calculs" value="Calculs">
+</form>
+
+<form action="total" method="GET">
+    <input type="submit" id="total" value="Total chantier">
+</form>
+
+
+<h2></h2>
+
+</body>
+</html>
