@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Liste Matériaux</title>
+</head>
+<body>
+
+<h1><u>Prix matériaux</u></h1>
+
+<h4><u>Ajouter matériaux à la liste</u></h4>
+
+<form th:action="@{/ajout}" id="modif" method="GET">
+    <label class="label">Nom : </label><input type="text" name="nom">
+    <label class="label">Prix : </label><input type="text" name="prix">
+    <label class="label">Stock : </label><input type="text" name="stock">
+    <input class="label" type="submit" value="Enregistrer">
+</form>
+
+<h4><u>Liste matériaux enregistrés :</u></h4>
+
+<table border="1px solid black" width="350px">
+    <th>Nom</th>
+    <th>Prix</th>
+    <th>Stock</th>
+    <tr th:each="materiaux : ${materiauxes}">
+        <td th:text="${materiaux.nom}"></td>
+
+        <td th:switch="${materiaux.id}">
+            <span th:case="6" th:text="${materiaux.prix}"></span>
+            <span th:case="8" th:text="${materiaux.prix}+ L"></span>
+            <div th:case="*">
+                <div th:text="${materiaux.prix}+ €"/>
+            </div>
+        <td th:text="${materiaux.stock}"></td>
+        <td>
+            <a th:href="${materiaux.id}">MODIFIER</a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
