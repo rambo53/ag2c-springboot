@@ -137,7 +137,7 @@ public class MateriauxController {
         }
         versants.getVersants().add(toiture);
 
-        return "calculs";
+        return "calculs-toiture";
     }
 
 
