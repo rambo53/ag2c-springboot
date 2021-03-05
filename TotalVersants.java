@@ -268,11 +268,11 @@ public class TotalVersants {
         setCoutTotalRepas(coutTotalRepas);
         lastId++;
 
-        coutArdoiseMarge=totalArdoisesChantier*cherchePrix(lastId);
+        coutArdoiseMarge=coutTotalArdoises*cherchePrix(lastId);
         setCoutArdoiseMarge(coutArdoiseMarge);
-        coutVoligeMarge=totalVoligeChantier*cherchePrix(lastId);
+        coutVoligeMarge=coutTotalvolige*cherchePrix(lastId);
         setCoutVoligeMarge(coutVoligeMarge);
-        coutLiteauMarge=totalMetresLiteauChantier*cherchePrix(lastId);
+        coutLiteauMarge=coutTotalLiteau*cherchePrix(lastId);
         setCoutLiteauMarge(coutLiteauMarge);
         lastId++;
 
@@ -318,7 +318,7 @@ public class TotalVersants {
 
     public float coutTotalChantier(){
 
-        coutTotalChantier=(float) Math.ceil(coutTotalArdoises+coutTotalCarburant+coutTotalHoraire+coutTotalLiteau+coutTotalRepas+coutTotalvolige+coutTotalCarburant);
+        coutTotalChantier=(float) Math.ceil(coutTotalArdoises+coutTotalCarburant+coutTotalLiteau+coutTotalRepas+coutTotalvolige);
 
         return coutTotalChantier;
     }
